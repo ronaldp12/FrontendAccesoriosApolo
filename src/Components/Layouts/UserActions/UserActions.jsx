@@ -14,7 +14,7 @@ export const UserActions = ({ toggleMenu }) => {
 
       <div className="container-icon-actions">
         <button className="register">registrarse</button>
-        <button className="login">iniciar sesion</button>
+        <button className="login">iniciar sesión</button>
       </div>
     </>
   );

@@ -7,8 +7,8 @@ export const BestSellersSection = () => {
   return (
     <section className="best-sellers-section">
       <div className="section-header">
-        <h2>LO MAS VENDIDO</h2>
-        <button>VER MAS</button>
+        <h2>LO MÁS VENDIDO</h2>
+        <button>VER MÁS</button>
       </div>
 
       <div className="products-container">

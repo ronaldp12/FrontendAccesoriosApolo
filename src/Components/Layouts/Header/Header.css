@@ -241,21 +241,6 @@ header {
     align-items: center;
 }
 
-
-
-@media (max-width: 820px) {
-    .search-container {
-        width: 12rem;
-    }
-}
-
-@media (max-width: 482px) {
-
-    .hamburger-btn {
-        display: block;
-    }
-}
-
 @media (min-width: 394px) and (max-width: 431px) {
 
     .logo-container {
@@ -492,7 +477,135 @@ header {
 
 }
 
-@media (min-width: 822px) and (max-width: 1800px) {
+@media (min-width: 822px) and (max-width: 1367px){
+    .container-header{
+        height: 6rem;
+    }
+
+    .logo-container {
+        justify-content: center;
+        width: 8rem;
+    }
+
+    .logo {
+        width: 8rem;
+        height: auto;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+
+    .container-icon2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        text-align: left;
+        gap: 1rem;
+        width: 8rem;
+    }
+
+    .container-icon {
+        display: none;
+    }
+
+    .container-icon-actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        position: relative;
+        overflow: visible;
+        padding-right: 2rem;
+    }
+
+    .search-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-input {
+        width: 20rem;
+        font-size: 1rem;
+    }
+
+    .search-icon {
+        right: -1.5rem;
+        top: 55%;
+    }
+
+    .item-action {
+        font-size: 0.9rem;
+    }
+
+    .hgi-baseball-helmet,
+    .hgi-backpack-03,
+    .hgi-location-01 {
+        font-size: 1.3rem;
+    }
+
+    .hamburger-actions {
+        gap: 2rem;
+    }
+
+    .item-top {
+        font-size: 0.8rem;
+    }
+
+    .item-extend {
+        white-space: nowrap;
+        width: 100%;
+    }
+
+    .item-extend:hover {
+        width: 98%;
+    }
+
+    .hamburger-menu {
+        width: 40vw;
+    }
+
+    .container-buttons{
+        display: none;
+    }
+
+    .hamburger-btn-actions {
+        display: none;
+    }
+
+    .register {
+        width: 6.5rem;
+        height: 1.8rem;
+        font-size: 0.65rem;
+        position: absolute;
+        right: 5.5rem;
+        top: -0.5rem;
+    }
+
+    .login {
+        width: 6.5rem;
+        height: 1.8rem;
+        font-size: 0.65rem;
+        position: absolute;
+        right: -1.5rem;
+        top: -0.5rem;
+    }
+
+    .container-list {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.7rem;
+        margin-right: 4rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1368px) and (max-width: 1800px) {
     .container-header{
         height: 6rem;
     }

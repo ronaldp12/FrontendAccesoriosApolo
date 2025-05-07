@@ -1,0 +1,232 @@
+.register-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    background-color: rgba(255, 255, 255, 0.2); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.register-modal-content {
+    height: 70%;
+    background: radial-gradient(circle at 50% 90%, #1f1fa2, #06003b);
+    border-radius: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    display: flex;
+    flex-direction: row-reverse; /* Cambia el orden: imagen a la derecha */
+    width: 60%;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.register-modal-content h2 {
+    font-size: 30px;
+    align-items: center;
+    
+    margin-bottom: 3rem; /* Espacio entre el título y el formulario */
+    margin-left: 7rem;
+}
+
+.register-modal-content-form {
+    margin-left: 1rem;
+    margin-right: 2rem; /* Ajusta el margen derecho */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el formulario */
+    width: 100%;
+}
+
+.register-modal-content-form form {
+    display: flex;
+    flex-direction: column; /* Los elementos principales estarán en columna */
+    gap: 20px; /* Espacio entre las filas */
+    width: 100%; /* Asegura que el formulario ocupe todo el ancho disponible */
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos en la fila */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+.form-group {
+    flex: 1; /* Asegura que los elementos ocupen el mismo ancho */
+    display: flex;
+    flex-direction: column; /* Los elementos dentro del grupo estarán en columna */
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.form-group input {
+    width: 0%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.register-modal-content-form label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+    color: #ffffff;
+    text-align: left;
+    margin-left: 2rem; 
+}
+
+.register-modal-content-form input {
+    width: 90%; /* Ocupa todo el ancho disponible */
+    padding: 8px; /* Espaciado interno */
+    border: 1px solid #ccc;
+    border-radius: 60px;
+    font-size: 10px;
+    margin-top: 10px;
+    margin-left: 2rem;
+}
+
+.register-modal-content-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #1f1fa2;
+    color: #ffffff;
+    border: none;
+    border-radius: 90px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 40%;
+    align-self: center; /* Centra el botón horizontalmente */
+}
+
+.register-modal-content-form button:hover {
+    background-color: #06003b;
+}
+
+.register-modal-img {
+    width: 820px;
+    height: 444px;
+    overflow: hidden;
+    border-top-right-radius: 40px; /* Cambia a la esquina superior derecha */
+    border-bottom-right-radius: 40px; /* Cambia a la esquina inferior derecha */
+    position: relative;
+}
+
+.register-modal-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.register-modal-close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 7px;
+    right: 15.2rem;
+    background-color: rgba(128, 128, 128, 0.8); /* gris semitransparente */
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    margin-top: 4.2rem;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.register-modal-close:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgba(100, 100, 100, 1); /* más oscuro al pasar el mouse */
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    .modal-content,
+    .register-modal-content {
+        width: 80%; /* Reduce el ancho del modal */
+        flex-direction: column; /* Cambia a diseño en columna */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .modal-img-login,
+    .register-modal-img {
+        width: 100%; /* Imagen ocupa todo el ancho */
+        height: 200px; /* Ajusta la altura */
+        border-radius: 0; /* Elimina los bordes redondeados */
+    }
+
+    .modal-content-form,
+    .register-modal-content-form {
+        margin: 0; /* Elimina márgenes */
+        padding: 20px; /* Agrega espacio interno */
+        width: 100%; /* Asegura que el formulario ocupe todo el ancho */
+    }
+
+    .modal-content h2,
+    .register-modal-content h2 {
+        margin-left: 0; /* Centra el título */
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-content,
+    .register-modal-content {
+        width: 90%; /* Más pequeño en pantallas medianas */
+    }
+
+    .modal-content-form form,
+    .register-modal-content-form form {
+        gap: 15px; /* Reduce el espacio entre los campos */
+    }
+
+    .modal-content-form button,
+    .register-modal-content-form button {
+        width: 80%; /* Botón más ancho */
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content,
+    .register-modal-content {
+        width: 95%; /* Ocupa casi todo el ancho */
+        padding: 10px; /* Reduce el espacio interno */
+    }
+
+    .modal-img-login,
+    .register-modal-img {
+        height: 150px; /* Imagen más pequeña */
+    }
+
+    .modal-content-form input,
+    .register-modal-content-form input {
+        font-size: 12px; /* Reduce el tamaño de fuente */
+        padding: 8px; /* Reduce el espaciado interno */
+    }
+
+    .modal-content-form button,
+    .register-modal-content-form button {
+        font-size: 14px; /* Reduce el tamaño del texto */
+        padding: 8px 16px; /* Reduce el espaciado interno */
+    }
+
+    .modal-close,
+    .register-modal-close {
+        width: 30px;
+        height: 30px;
+        font-size: 18px; /* Reduce el tamaño de la "X" */
+    }
+}

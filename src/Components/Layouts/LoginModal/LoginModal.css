@@ -1,0 +1,225 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal_title_login {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    margin-left: 4rem;
+}
+
+.modal-content {
+    height: 70%;
+    background: radial-gradient(circle at 50% 90%, #1f1fa2, #06003b);
+    border-radius: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    display: flex;
+    width: 50%;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.modal-content h2 {
+    font-size: 30px;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+}
+
+.modal-content-form {
+    margin-left: 2.5rem;
+}
+
+.modal-content-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.modal-content-form label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.modal-content-form input {
+    width: 90%;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 60px;
+    font-size: 10px;
+    margin-top: 10px;
+    margin-left: 1rem;
+}
+
+.modal-content-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #1f1fa2;
+    color: #ffffff;
+    border: none;
+    border-radius: 90px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 60%;
+    margin-left: 3rem;
+}
+
+.modal-content-form u {
+    text-align: right;
+    font-size: smaller;
+    margin-right: 1rem;
+}
+
+.modal-content-form button:hover {
+    background-color: #06003b;
+}
+
+.modal-img-login {
+    width: 320px;
+    height: 444px;
+    overflow: hidden;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    position: relative;
+}
+
+.modal-img-login > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 7px;
+    right: 19.1rem;
+    background-color: rgba(128, 128, 128, 0.8);
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    margin-top: 4.2rem;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.modal-close:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgba(100, 100, 100, 1);
+}
+
+@media (max-width: 1024px) {
+    .modal-content {
+        width: 80%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .modal-img-login {
+        width: 100%;
+        height: 200px;
+        border-radius: 0;
+        overflow: hidden;
+    }
+
+    .modal-img-login > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .modal-content-form {
+        margin: 0;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .modal-content h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+    }
+
+    .modal-img-login {
+        height: 180px;
+    }
+
+    .modal-img-login > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .modal-content-form form {
+        gap: 15px;
+    }
+
+    .modal-content-form button {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .modal-img-login {
+        height: 150px;
+        width: 100%;
+    }
+
+    .modal-img-login > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .modal-content-form input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .modal-content-form button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .modal-close {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+}
